@@ -7,6 +7,7 @@ namespace PreWorkChallenges
         static void Main(string[] args)
         {
             Console.Write($"Your score is: {ChallengeOne()}.");
+            ChallengeTwo();
         }
 
         //Challenge one, Array Max Result
@@ -34,6 +35,20 @@ namespace PreWorkChallenges
             }
 
             return (numInput * count);
+        }
+
+        //Challenge two, Leap Year Calendar
+        static void ChallengeTwo()
+        {
+            Console.Write("Enter a year to find out if it is a leap year:");
+            int year = Int32.Parse(Console.ReadLine());
+
+            if (year % 4 == 0)
+                Console.WriteLine($"The year {year} is a leap year.");
+            else if (year % 100 == 0 && year % 400 == 0)
+                Console.WriteLine($"The year {year} is a leap year.");
+            else
+                Console.WriteLine($"The year {year} is not a leap year.");   
         }
     }
 }
